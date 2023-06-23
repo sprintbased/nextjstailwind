@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --coverage",
+    "test": "jest --coverage --reporters=default --reporters=jest-junit",
     "jest": "jest"
   },
   "dependencies": {
@@ -24,6 +24,7 @@
     "eslint-config-next": "13.4.5",
     "jest-cli": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
+    "jest-junit": "^16.0.0",
     "next": "13.4.5",
     "postcss": "8.4.24",
     "react": "18.2.0",
@@ -36,5 +37,15 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "resize-observer-polyfill": "^1.5.1"
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "outputDirectory": "__tests__/__results__",
+    "outputName": "jest-junit.xml",
+    "ancestorSeparator": " › ",
+    "uniqueOutputName": "false",
+    "suiteNameTemplate": "{filepath}",
+    "classNameTemplate": "{classname}",
+    "titleTemplate": "{title}"
   }
 }
