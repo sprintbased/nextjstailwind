@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="3" failures="0" errors="0" time="2.308">
+  <testsuite name="src/components/header/Header.test.tsx" errors="0" failures="0" skipped="0" timestamp="2023-06-23T06:00:30" time="1.877" tests="3">
+    <testcase classname="Header component" name="renders the mobile menu when the button is clicked" time="0.622">
+    </testcase>
+    <testcase classname="Header component" name="renders the logo and top navigation links" time="0.091">
+    </testcase>
+    <testcase classname="Header component" name="shows the number of items in the cart" time="0.039">
+    </testcase>
+  </testsuite>
+</testsuites>
