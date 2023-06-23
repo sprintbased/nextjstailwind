@@ -10,6 +10,7 @@ import {
 import { HeaderWrapper, HeaderBanner, MainNav, MainNavListWrapper, MainNavFlexWrapper, MainNavLogoWrapper, ScreenReaderText } from "./Header.style";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
@@ -172,6 +173,7 @@ const Header = () => {
                 <div className="flex px-4 pb-2 pt-5">
                   <button
                     type="button"
+                    aria-label="Close menu"
                     className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
                     onClick={() => setOpen(false)}
                   >
@@ -331,6 +333,7 @@ const Header = () => {
             <MainNavFlexWrapper>
               <button
                 type="button"
+                aria-label="Open menu"
                 className="rounded-md bg-white p-2 text-gray-400 lg:hidden"
                 onClick={() => setOpen(true)}
               >
@@ -355,24 +358,23 @@ const Header = () => {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <a
+                  <Link
                     href="#"
                     className="text-sm font-medium text-gray-700 hover:text-gray-800"
                   >
                     Sign in
-                  </a>
+                  </Link>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <a
+                  <Link
                     href="#"
                     className="text-sm font-medium text-gray-700 hover:text-gray-800"
                   >
                     Create account
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="hidden lg:ml-8 lg:flex">
-                  <a
-                    href="#"
+                  <button                    
                     className="flex items-center text-gray-700 hover:text-gray-800"
                   >
                     <img
@@ -382,23 +384,23 @@ const Header = () => {
                     />
                     <span className="ml-3 block text-sm font-medium">CAD</span>
                     <span className="sr-only">, change currency</span>
-                  </a>
+                  </button>
                 </div>
 
                 {/* Search */}
                 <div className="flex lg:ml-6">
-                  <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
+                  <button className="p-2 text-gray-400 hover:text-gray-500">
                     <span className="sr-only">Search</span>
                     <MagnifyingGlassIcon
                       className="h-6 w-6"
                       aria-hidden="true"
                     />
-                  </a>
+                  </button>
                 </div>
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <a href="#" className="group -m-2 flex items-center p-2">
+                  <Link href="#" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                       aria-hidden="true"
@@ -407,7 +409,7 @@ const Header = () => {
                       0
                     </span>
                     <span className="sr-only">items in cart, view bag</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </MainNavFlexWrapper>
