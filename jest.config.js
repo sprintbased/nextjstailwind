@@ -10,14 +10,14 @@ const createJestConfig = nextJest({
 const config = {
   // Add more setup options before each test is run
   coverageReporters: ["html", "text", "text-summary", "cobertura"],
-  // coverageThreshold: {
-  //   global: {
-  //     statements: 80,
-  //     branches: 80,
-  //     functions: 80,
-  //     lines: 80,
-  //   },
-  // },
+  coverageThreshold: {
+    global: {
+      statements: 80,
+      branches: 80,
+      functions: 80,
+      lines: 80,
+    },
+  },
   collectCoverageFrom: [
     "<rootDir>/src/**/*.ts",
     "<rootDir>/src/**/*.tsx",
